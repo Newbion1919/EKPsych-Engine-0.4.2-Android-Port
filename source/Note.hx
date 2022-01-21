@@ -66,6 +66,37 @@ class Note extends FlxSprite
 
 	public var noAnimation:Bool = false;
 	public var hitCausesMiss:Bool = false;
+	
+	
+	/////ek shit i copied
+	public static var mania:Int = 0; 
+	public static var noteScale:Float;
+	public static var pixelnoteScale:Float;
+	public static var tooMuch:Float = 30;
+
+	public static var p1NoteScale:Float;
+	public static var p2NoteScale:Float;
+	public var defaultWidth:Float;
+
+	public static var noteScales:Array<Float> = [0.7, 0.6, 0.5, 0.65, 0.58, 0.55, 0.7, 0.7, 0.7];
+	public static var pixelNoteScales:Array<Float> = [1, 0.83, 0.7, 0.9, 0.8, 0.74, 1, 1, 1];
+	public static var noteWidths:Array<Float> = [112, 84, 66.5, 91, 77, 70, 140, 126, 119];
+	public static var sustainXOffsets:Array<Float> = [97, 84, 70, 91, 77, 78, 97, 97, 97];
+	public static var posRest:Array<Int> = [0, 35, 70, 0, 50, 60, 0, 0, 0];
+
+	public static var frameN:Array<Dynamic> = [
+		['purple', 'blue', 'green', 'red'],
+		['purple', 'green', 'red', 'yellow', 'blue', 'dark'],
+		['purple', 'blue', 'green', 'red', 'white', 'yellow', 'violet', 'darkred', 'dark'],
+		['purple', 'blue', 'white', 'green', 'red'],
+		['purple', 'green', 'red', 'white', 'yellow', 'blue', 'dark'],
+		['purple', 'blue', 'green', 'red', 'yellow', 'violet', 'darkred', 'dark'],
+		['white'],
+		['purple', 'red'],
+		['purple', 'white', 'red']
+	];
+	public static var keyAmmo:Array<Int> = [4, 6, 9, 5, 7, 8, 1, 2, 3];
+	public static var ammoToMania:Array<Int> = [0, 6, 7, 8, 0, 3, 1, 4, 5, 2];
 
 	private function set_texture(value:String):String {
 		if(texture != value) {
